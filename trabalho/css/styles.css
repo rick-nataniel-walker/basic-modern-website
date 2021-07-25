@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+/* COMMON STYLING */
+
+*{
+    outline: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+h1,h2,h3{
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 500;
+}
+
+body{
+    background-color: #f0f0;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header{
+    padding-bottom: 1rem;
+    font-size: 4rem;
+    text-transform: uppercase;
+    border-bottom: .1rem solid  #52006A;
+}
+
+/* End of common styling */
+
+
+/* logo */
+.logo{
+    position: absolute;
+    top: 10rem;
+    left: 3rem;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: .2rem solid #52006A;
+    z-index: 1;
+    /* mix-blend-mode: color-dodge; */
+}
+
+.logo img{
+    width: 10rem;
+    height: 10rem;
+}
+/* End of logo */
+
+/* Progress Bar */
+.progress-bar{
+    position: fixed;
+    width: 5rem;
+    height: 5rem;
+    bottom: 3rem;
+    right: 1rem;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 200;
+    overflow: hidden;
+    transform: translate(-50%,-50%);
+}
+
+.half-circle,
+.half-circle-top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    transform-origin: right center;
+    pointer-events: none;
+}
+
+.half-circle:nth-child(1){
+    background-color: #b60000;
+}
+.half-circle:nth-child(2){
+    background-color: #b60000;;
+}
+.half-circle-top{
+    background-color: #fff ;
+}
+
+
+
+.progress-bar-circle{
+    width: 4.9rem;
+    height: 4.9rem;
+    border-radius: 50%;
+    background-color: #000;
+    color: #fff;
+    font-size: 3rem;
+    z-index: 200;
+    transition: transform .8s linear;
+    pointer-events: none;
+}
+/* End Of Progress Bar */
+
+
+/* Navigation */
+/* Navbar */
+.navbar{
+    position: fixed;
+    top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 3rem;
+    transition: opacity 1s, visibility .5s, transform .5s;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hide-navbar{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10rem);
+}
+
+/* Nav Icon */
+.menu-icon{
+    position: fixed;
+    width: 12rem;
+    height: 7rem;
+    top: 2rem;
+    right: -7rem;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s;
+    cursor: pointer;
+    z-index: 100;
+    transform: translate(-50%,-50%);
+}
+
+.show-menu-icon{
+    opacity: 1;
+    visibility: visible;
+}
+/* End of Nav Icon */
+
+/* nav line icons */
+.menu-icon-line{
+    background-color: #DA0037;
+    width: 3rem;
+    height: .1rem;
+    margin: .3rem 0;
+    box-shadow: 0 .2rem .3rem #000;
+
+}
+/* End of line icons */
+
+/* Navbar link */
+.navbar-link{
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #EDEDED;
+    margin: 0 2.5rem;
+    z-index: 100;
+    text-shadow: .1rem .1rem #000;
+    padding: .2rem;
+    transition: transform .1s, border-radius .5s ;
+}
+
+.navbar-link:hover{
+    border: .1rem solid #DA0037;
+    border-radius: .5rem;
+    color: rgba(218, 0, 55,.7);
+    text-shadow: none;
+}
+/* End of Navbar link */
+
+/* End of Navbar */
+/* End of Navigation */
+
+/* Section 1 */
+.section-1{
+    top: 0;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2)), url('../imagens/girl-background.jpg') center no-repeat;
+    background-size: cover;
+}
+/* End of of Section 1 */
+
+/* Section -2 */
+.section-2{
+    position: relative;
+    padding: 5rem 5rem 15rem ;
+
+}
+/* Header */
+
+
+.h-text{
+    font-size: 2rem;
+    text-align: justify;
+}
+/* End of Header */
+
+
+
+
+/* End of Section -2 */
+
+/* Section-3 */
+.section-3{
+    background-color: rgba(237, 237, 237,.2);
+    position: relative;
+    padding: 5rem;
+}
+
+.box-wrapper{
+    
+    flex-wrap: wrap;
+}
+.box{
+    background-color: #fff ;
+    width: 18rem;
+    height: 25rem;
+    box-shadow: 1px 1px 1px 1px rgba(0,0,0,.2);
+    border-radius: 2px;
+    margin: 1rem;
+}
+.box img{
+    width:100%;
+    height: 50%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding-bottom: .7rem;
+}
+.box h2{
+    font-size: large;
+    padding-bottom: .5rem;
+    margin-left: .5rem;
+}
+
+.box p{
+    font-size: small;
+    text-align:justify;
+    margin: .5rem;
+    
+}
+
+/* End of Section-3 */
+
+/* Section 4 */
+.section-4{
+    padding: 5rem;
+   
+}
+
+.contact-form{
+    margin: 1rem;
+    padding-top: 2rem;   
+    flex-direction: column;
+}
+
+.txt-input{
+    width: 30rem;
+    padding: .7rem;
+    margin: .3rem;
+    font-size: 1rem;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    letter-spacing: .2rem;
+    transition: border 1s, background-color .5s;
+    
+}
+
+.txt-input:focus{
+    border: 1px solid #DA0037;
+    background-color: rgba(237, 237, 237,.2);
+    
+}
+
+.msg-input{
+    resize: none;
+}
+.ok-btn{
+    background-color: #DA0037;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: large;
+    cursor: pointer;
+    
+}
+/* End of Section 4 */
+
+/* Footer */
+.main-footer{
+    background-color:  rgba(237, 237, 237,.5);;
+    height: 15rem;
+    padding: 2rem 0;
+}
+
+.footer-wrapper{
+    flex-direction: row;
+     justify-content: space-around; 
+}
+
+.newsletter-wrapper h2{
+    padding-bottom: 1rem;
+    left: 0;
+}
+ 
+.news-btn{
+    width: 10rem;
+}
+.news-btn:focus{
+    background-color: #fff;
+}
+
+.address-wrapper p{
+    margin: 1rem;
+}
+
+/* End of Footer */
